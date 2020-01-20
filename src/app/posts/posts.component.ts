@@ -33,18 +33,19 @@ export class PostsComponent implements OnInit {
       if(this.posts.isLiked == false) {
           this.posts.likes++;
           this.posts.isLiked=true;
-          this.posts.button='';
+          this.posts.button='https://cdn1.iconfinder.com/data/icons/instagram-23/512/198_Love_Instagram_Interface_Like-512.png';
       }
       else {
           this.posts.likes--;
           this.posts.isLiked=false;
-          this.posts.button='';
+      this.posts.button='https://www.pinclipart.com/picdir/middle/33-337369_heart-shaped-clipart-instagram-heart-sign-icon-transparent.png';
       }
       this.updatepost();
   }
 
   onSave() {
       if (this.posts.isSaved ==false) {
+          
           this.posts.isSaved=true;
           this.posts.savebutton='';
       }
