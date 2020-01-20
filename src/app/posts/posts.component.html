@@ -1,3 +1,27 @@
 <mat-card class="example-card">
-    <img mat-card-image [src]=pictureUrl alt="Photo of a Shiba Inu" class="sizeImg">
+<mat-card-header class="header">
+    <img mat-card-avatar class="example-header-image point">
+    <mat-card-title class="point">{{ posts.name }}</mat-card-title>
+
+    <mat-card-subtitle>{{posts.location}}</mat-card-subtitle>
+</mat-card-header>
+<div class="img_wrap">
+    <div (click)="onclick(post)">
+        <img class="sizeImg" mat-card-image [src]="pictureUrl" alt="Photo" >
+    </div>
+        <p class="img_comm">Click to see comments</p>
+</div>
+    <mat-card-content>
+
+        <p><b>{{ posts.name }}:</b> {{posts.longDescription}}
+        </p>
+    </mat-card-content>
+    <img class="icon point" [src]="posts.button" (click)="onLike()"/>
+      <p class="likes">
+          <strong> {{posts.likes}}</strong>
+      </p>
+      <img class="icon savebutton point" [src]="post.savebutton" (click)="onSave()"/>
+
+
+    
 </mat-card>

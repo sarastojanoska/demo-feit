@@ -8,11 +8,12 @@
 }
 
 .comment{
-    width: 300px;
+    width: initial;
     float: right;
 }
 
 .scroll {
     overflow: auto;
-    height: 80%;
+    height: 87%;
   }
+

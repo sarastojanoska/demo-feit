@@ -19,4 +19,7 @@ export class InstagramApiService {
     postComment(postId: number, comment: PostComment){
         return this.http.post(`https://5df115fd9df6fb00142bd818.mockapi.io/api/posts/${postId}/postComments`, comment);
     }
+    updatepost(posts: Post, postId: number){
+        return this.http.put(`https://5dfa537238678a00145fa10f.mockapi.io/api/posts/${postId}`, posts);
+    }
 }
